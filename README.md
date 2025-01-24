@@ -1,72 +1,78 @@
-```markdown
-# CKD - Chronic Kidney Disease Prediction
+# Chronic Kidney Disorder Classifier Using MLflow
 
-## Description
-CKD is a machine learning project aimed at predicting Chronic Kidney Disease (CKD) using various algorithms and dataset analysis. The goal is to help in early diagnosis and treatment options for patients with risk factors associated with kidney diseases.
+This project aims to develop a machine learning model to classify Chronic Kidney Disorder (CKD) using MLflow for experiment tracking and model management.
 
 ## Table of Contents
+
+- [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Data](#data)
-- [Algorithms Used](#algorithms-used)
+- [Dataset](#dataset)
+- [Model](#model)
 - [Contributing](#contributing)
 - [License](#license)
 
+## Introduction
+
+Chronic Kidney Disease is a significant health concern worldwide. Early detection and classification can aid in better management and treatment. This project utilizes machine learning techniques to classify CKD stages based on various medical parameters.
+
 ## Features
-- Predict CKD using multiple machine learning models.
-- Data preprocessing and feature selection.
-- Visualizations of important features and model performance.
-- User-friendly interface to input patient data for predictions.
+
+- Data preprocessing and feature engineering
+- Model training and evaluation
+- Experiment tracking with MLflow
+- User interface for model inference
 
 ## Installation
-To set up this project locally, follow these steps:
 
-1. **Clone the repository**
+1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/TheGridGlitch/CKD.git
    cd CKD
-   ```
+Create a virtual environment:
 
-2. **Install dependencies**
-   Use `pip` to install required Python packages.
-   ```bash
-   pip install -r requirements.txt
-   ```
+bash
+Copy
+Edit
+python3 -m venv venv
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+Install the required packages:
 
-## Usage
-To run the project, use the following command in your terminal:
-```bash
+bash
+Copy
+Edit
+pip install -r requirements.txt
+Usage
+Data Preprocessing:
+
+The dataset.py script handles data loading and preprocessing. Ensure your dataset is in the correct format and update the script as necessary.
+
+Model Training:
+
+Run the main.py script to train the model. This script will:
+
+Load and preprocess the data
+Train a logistic regression model
+Log the model and parameters using MLflow
+bash
+Copy
+Edit
 python main.py
-```
-Follow the on-screen instructions to input the necessary data for prediction.
+Model Inference:
 
-## Data
-The dataset used in this project can be found in the `data/` directory. It includes various features relevant to Chronic Kidney Disease.
+Use the ckd_ui.py script to launch a simple user interface for model inference.
 
-### Data Sources
-- [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/chronic_kidney_disease) - Source of the CKD dataset.
+bash
+Copy
+Edit
+python ckd_ui.py
+Dataset
+The project includes a synthetic dataset named synthetic_kidney_disease_data.csv. If you have a real dataset, replace this file and ensure it matches the expected format.
 
-## Algorithms Used
-This project implements several machine learning algorithms, including but not limited to:
-- Logistic Regression
-- Decision Trees
-- Random Forest
-- Support Vector Machines (SVM)
+Model
+The current model is a logistic regression classifier. The trained model is saved as logistic_regression_model.pkl, and the training feature names are stored in training_feature_names.pkl.
 
-## Contributing
-Contributions are welcome! If you have suggestions for improvements or new features, please fork the repository and submit a pull request.
-
-1. Fork the repo
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-- Special thanks to [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php) for providing the dataset.
-- Acknowledgments to all contributors and sources referenced throughout this project.
-```
+Contributing
+Contributions are welcome! Please fork the repository and submit a pull request with your changes.
