@@ -31,48 +31,59 @@ Chronic Kidney Disease is a significant health concern worldwide. Early detectio
    ```bash
    git clone https://github.com/TheGridGlitch/CKD.git
    cd CKD
-Create a virtual environment:
+   ```
 
-bash
-Copy
-Edit
-python3 -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-Install the required packages:
+2. **Create a virtual environment:**
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Usage
-Data Preprocessing:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows, use `venv\Scriptsctivate`
+   ```
 
-The dataset.py script handles data loading and preprocessing. Ensure your dataset is in the correct format and update the script as necessary.
+3. **Install the required packages:**
 
-Model Training:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Run the main.py script to train the model. This script will:
+## Usage
 
-Load and preprocess the data
-Train a logistic regression model
-Log the model and parameters using MLflow
-bash
-Copy
-Edit
-python main.py
-Model Inference:
+1. **Data Preprocessing:**
 
-Use the ckd_ui.py script to launch a simple user interface for model inference.
+   The `dataset.py` script handles data loading and preprocessing. Ensure your dataset is in the correct format and update the script as necessary.
 
-bash
-Copy
-Edit
-python ckd_ui.py
-Dataset
-The project includes a synthetic dataset named synthetic_kidney_disease_data.csv. If you have a real dataset, replace this file and ensure it matches the expected format.
+2. **Model Training:**
 
-Model
-The current model is a logistic regression classifier. The trained model is saved as logistic_regression_model.pkl, and the training feature names are stored in training_feature_names.pkl.
+   Run the `main.py` script to train the model. This script will:
 
-Contributing
+   - Load and preprocess the data
+   - Train a logistic regression model
+   - Log the model and parameters using MLflow
+
+   ```bash
+   python main.py
+   ```
+
+3. **Model Inference:**
+
+   Use the `ckd_ui.py` script to launch a simple user interface for model inference.
+
+   ```bash
+   python ckd_ui.py
+   ```
+
+## Dataset
+
+The project includes a synthetic dataset named `synthetic_kidney_disease_data.csv`. If you have a real dataset, replace this file and ensure it matches the expected format.
+
+## Model
+
+The current model is a logistic regression classifier. The trained model is saved as `logistic_regression_model.pkl`, and the training feature names are stored in `training_feature_names.pkl`.
+
+## Contributing
+
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
